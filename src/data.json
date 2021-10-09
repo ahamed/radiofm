@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Putin FM",
+    "frequency": "66,6",
+    "image": "./images/stations/planet-01.png"
+  },
+  {
+    "id": 2,
+    "name": "Dribble FM",
+    "frequency": "101,2",
+    "image": "./images/stations/planet-02.png"
+  },
+  {
+    "id": 3,
+    "name": "Doge FM",
+    "frequency": "99,4",
+    "image": "./images/stations/planet-03.png"
+  },
+  {
+    "id": 4,
+    "name": "Ballads FM",
+    "frequency": "87,1",
+    "image": "./images/stations/planet-04.png"
+  },
+  {
+    "id": 5,
+    "name": "Maximum FM",
+    "frequency": "142,2",
+    "image": "./images/stations/planet-05.png"
+  }
+]

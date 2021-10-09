@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+/** Components */
+import Container from "@components/container/container";
+import StoreProvider from "@hooks/useRadioStore";
+import reducer from "@store/reducer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreProvider
+      initialState={{
+        stations: [],
+        errors: [],
+        loading: false,
+        activeStation: null,
+      }}
+      reducer={reducer}
+    >
+      <Container />
+    </StoreProvider>
   );
 }
 

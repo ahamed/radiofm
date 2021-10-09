@@ -1,0 +1,10 @@
+@mixin flex-center($direction: row) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+@mixin font-weight($key: regular) {
+	font-weight: map-get($font-weights, $key);
+}

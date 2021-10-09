@@ -1,0 +1,70 @@
+@import "@scss/variables";
+@import "@scss/mixins";
+
+.station-item {
+	padding: 40px 20px;
+	font-size: 24px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+		z-index: 2;
+		position: relative;
+	}
+
+	&__wrapper-click-area {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -40px;
+		bottom: 0;
+		visibility: hidden;
+		height: 100px;
+	}
+
+	&:not(:last-child) {
+		border-bottom: 1px solid #353540;
+	}
+
+	:is(&__wrapper-name, &__wrapper-frequency) {
+		@include font-weight(regular);
+	}
+
+	&__wrapper-frequency {
+		@include font-weight(bold);
+	}
+}
+
+.station-details {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0px;
+	z-index: 1;
+
+	height: 0;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+
+	&.active {
+		margin-bottom: 30px;
+		height: 110px;
+		opacity: 1;
+	}
+
+	&__image {
+		height: 150px;
+		width: 150px;
+		border-radius: 100%;
+	}
+
+	&__prev,
+	&__next {
+		cursor: pointer;
+
+		img {
+			height: 40px;
+		}
+	}
+}

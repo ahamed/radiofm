@@ -1,0 +1,70 @@
+@import "@scss/variables";
+@import "@scss/mixins";
+
+.container {
+	margin: 3.25rem auto;
+	width: 430px;
+	height: 670px;
+	background-color: $container_background;
+	box-shadow: 0 40px 30px -15px #07070a;
+	color: $content_text_color;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+	&__header {
+		background-color: $header_bg_color;
+		color: $header_text_color;
+		height: 100px;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	:is(&__header-back, &__header-power) {
+		cursor: pointer;
+
+		img {
+			height: 35px;
+		}
+	}
+
+	&__header-text {
+		font-size: 2rem;
+		text-transform: uppercase;
+		@include font-weight(extra-bold);
+	}
+
+	&__body {
+		color: $content_text_color;
+		height: calc(100% - 200px);
+		background-color: #292933;
+		border-bottom: 1px solid #4c4f5b;
+		overflow-y: auto;
+	}
+
+	&__footer {
+		height: 100px;
+	}
+
+	&__footer-current {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__footer-current-title {
+		color: $header_bg_color;
+		font-size: 16px;
+		text-transform: uppercase;
+		@include font-weight(bold);
+	}
+
+	&__footer-current-name {
+		font-size: 2.1rem;
+		color: currentColor;
+	}
+}

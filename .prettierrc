@@ -1,0 +1,14 @@
+{
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.endOfLine": "auto",
+  "prettier.jsxSingleQuote": true,
+  "prettier.proseWrap": "always",
+  "prettier.quoteProps": "as-needed",
+  "prettier.semi": true,
+  "prettier.tabWidth": 2,
+
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.useTabs": false
+}
