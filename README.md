@@ -16,6 +16,9 @@ You will also see any lint errors in the console.
 ### Radio FM
 Radio FM is an FM Radio application built with React JS.
 
+### Demo
+[https://radiofm.vercel.app](https://radiofm.vercel.app)
+
 ### Installation
 1. Clone the repository, `git clone git@github.com:ahamed/radiofm.git`
 2. Navigate to the project directory, `cd radiofm`
