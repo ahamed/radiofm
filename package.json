@@ -21,8 +21,9 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject"
+    "test": "craco test --verbose=true",
+    "eject": "craco eject",
+    "lint": "eslint --ext js,ts,tsx src"
   },
   "eslintConfig": {
     "extends": [
@@ -30,6 +31,10 @@
       "react-app/jest"
     ]
   },
+  "eslintIgnore": [
+    "*.spec.ts",
+    "*.test.tsx"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -44,5 +49,16 @@
   },
   "devDependencies": {
     "@craco/craco": "^6.3.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@components(.*)$": "<rootDir>/src/components$1",
+      "^@scss(.*)$": "<rootDir>/src/scss$1",
+      "@assets(.*)$": "<rootDir>/src/assets$1",
+      "@declares(.*)$": "<rootDir>/src/types$1",
+      "@store(.*)$": "<rootDir>/src/store$1",
+      "@hooks(.*)$": "<rootDir>/src/hooks$1",
+      "@utils(.*)$": "<rootDir>/src/utils$1"
+    }
   }
 }

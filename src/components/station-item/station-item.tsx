@@ -7,11 +7,11 @@ import { setActiveStation } from "@store/actions";
 /** Types */
 import { SingleStation } from "@declares/index";
 
-/** Styles */
-import style from "@components/station-item/station-item.module.scss";
-
 /** Components */
 import StationDetails from "@components/station-item/station-details";
+
+/** Styles */
+import style from "@components/station-item/station-item.module.scss";
 
 interface StationItemProps {
   station: SingleStation;
@@ -41,7 +41,10 @@ const StationItem = ({ station }: StationItemProps): JSX.Element => {
         <div className={style["station-item__wrapper-frequency"]}>
           {station.frequency}
         </div>
-        <div className={style["station-item__wrapper-click-area"]}></div>
+        <div
+          className={style["station-item__wrapper-click-area"]}
+          data-testid="selectionElement"
+        ></div>
       </div>
     </div>
   );

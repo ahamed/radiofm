@@ -5,12 +5,12 @@ import { SingleStation } from "@declares/index";
 import { useStoreContext } from "@hooks/useRadioStore";
 import { setActiveStation } from "@store/actions";
 
-import style from "@components/station-item/station-item.module.scss";
-
 /** Assets */
 import prevSrc from "@assets/images/minus.png";
 import nextSrc from "@assets/images/plus.png";
 
+/** Styles */
+import style from "@components/station-item/station-item.module.scss";
 interface StationDetailsProps {
   station: SingleStation;
   show: boolean;
@@ -55,6 +55,7 @@ const StationDetails = ({
       <button
         className={style["station-details__prev"]}
         onClick={navigateToPrevStation}
+        data-testid="prevStation"
       >
         <img src={prevSrc} alt="Previous" />
       </button>
@@ -66,6 +67,7 @@ const StationDetails = ({
       <button
         className={style["station-details__next"]}
         onClick={navigateToNextStation}
+        data-testid="nextStation"
       >
         <img src={nextSrc} alt="Next" />
       </button>

@@ -6,6 +6,17 @@ import "@scss/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+/**
+ * Using the react strict-mode. The strick mode allows you to warn you if you are using any
+ * Unsafe lifecycle,
+ * Legacy string reference,
+ * Deprecated findDOMNode usage,
+ * Unexpected side effects,
+ * Legacy context API.
+ * This is only applicable on the development mode.
+ *
+ * @see https://reactjs.org/docs/strict-mode.html
+ */
 ReactDOM.render(
   <React.StrictMode>
     <App />

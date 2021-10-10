@@ -26,12 +26,13 @@ const StationList = (): JSX.Element => {
     })();
   }, [dispatch]);
 
+  /** While the data is loading, render a spinner. */
   if (state.loading) {
     return <Loader />;
   }
 
   return (
-    <div className="station-list">
+    <div className="station-list" aria-label="Station List">
       {state.stations.length > 0 &&
         state.stations.map((station) => (
           <StationItem key={station.id} station={station} />
